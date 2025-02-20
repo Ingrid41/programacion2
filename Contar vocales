@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+char texto[20][81]{
+  int i; 
+  for(i=0; i<20; i++){
+    printf("\n\nIngresa la línea %d, i+1);
+    fgets(texto[i], 81, stdin);
+  }
+}
+
+int contar_vocales(char *str){
+  char *ptr = str;
+}
