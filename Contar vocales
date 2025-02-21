@@ -21,16 +21,10 @@ int main(){
   for(i=0; i<20; i++){
     printf("\n\nIngresa el texto %d: ", i+1);
     fgets(texto[i], 81, stdin);
-  }
 
-  printf("\n\nCantidad de Vocales de cada línea");
-  for(i=0; i<20; i++){
     vocales_linea = contar_vocales(texto[i]);
     printf("\n\nLas vocales de la linea %d son: %d", i+1, vocales_linea);
-    total_vocales = total_vocales + contar_vocales(texto[i]);
   }
-
-  printf("\n\nTotal de vocales en las 20 líneas: %d", total_vocales);
 
   return 0;
 }
