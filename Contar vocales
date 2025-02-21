@@ -1,13 +1,44 @@
 #include <stdio.h>
 
-char texto[20][81]{
-  int i; 
-  for(i=0; i<20; i++){
-    printf("\n\nIngresa la línea %d, i+1);
-    fgets(texto[i], 81, stdin);
-  }
-}
-
 int contar_vocales(char *str){
   char *ptr = str;
+  int contador=0;
+  while (*ptr != '\0'){
+    if(*ptr == 'a' || *ptr == 'e' || *ptr == 'i' || *ptr == 'o' || *ptr == 'u' || *ptr == 'A' || *ptr == 'E' || *ptr == 'I' || *ptr == 'O' || *ptr == 'U'){
+    contador++;  
+    }
+  ptr++;
+  }
+  return contador;
 }
+
+int main(){
+  char texto[20][81];
+  int i;
+  int vocales_linea;
+  int total_vocales=0;
+
+  for(i=0; i<20; i++){
+    printf("\n\nIngresa el texto %d: ", i+1);
+    fgets(texto[i], 81, stdin);
+  }
+
+  printf("\n\nCantidad de Vocales de cada línea");
+  for(i=0; i<20; i++){
+    vocales_linea = contar_vocales(texto[i]);
+    printf("\n\nLas vocales de la linea %d son: %d", i+1, vocales_linea);
+    total_vocales = total_vocales + contar_vocales(texto[i]);
+  }
+
+  printf("\n\nTotal de vocales en las 20 líneas: %d", total_vocales);
+
+  return 0;
+}
+
+
+
+
+
+
+
+
