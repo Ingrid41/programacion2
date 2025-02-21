@@ -16,7 +16,6 @@ int main(){
   char texto[20][81];
   int i;
   int vocales_linea;
-  int total_vocales=0;
 
   for(i=0; i<20; i++){
     printf("\n\nIngresa el texto %d: ", i+1);
